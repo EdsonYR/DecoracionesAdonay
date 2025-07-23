@@ -1,0 +1,292 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" />
+
+  <title>Decoraciones Adonay</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body>
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+    style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Header responsive -->
+      <header class="flex items-center justify-between border-b border-solid border-b-[#f4f2f1] px-4 md:px-10 py-3">
+        <div class="flex items-center gap-3 md:gap-4 text-[#171412]">
+          <!-- Logo responsive -->
+          <div
+            class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#eccec0] overflow-hidden">
+            <img src="https://i.imgur.com/CQiBx2I.png" alt="Logo Decoraciones Adonay"
+              class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+          </div>
+          <h2 class="text-[#171412] text-base md:text-lg font-bold leading-tight tracking-[-0.015em]">DECORACIÓNES
+            ADONAY</h2>
+        </div>
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex flex-1 justify-end gap-8 items-center">
+          <div class="flex items-center gap-9">
+            <a class="text-[#171412] text-sm font-medium leading-normal" href="index.html">Inicio</a>
+            <button id="open-servicios" type="button"
+              class="text-[#171412] text-sm font-medium leading-normal bg-transparent border-none cursor-pointer focus:outline-none">Servicios</button>
+          </div>
+          <a href="https://api.whatsapp.com/send/?phone=%2B51975450272&text=Hola%20buen%20día%2C%20deseo%20saber%20el%20presupuesto%20para%20una%20decoración%20de&type=phone_number&app_absent=0"
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#eccec0] text-[#171412] text-sm font-bold leading-normal tracking-[0.015em]">
+            <span class="truncate">Solicitar presupuesto</span>
+          </a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden flex items-center justify-center p-2" aria-label="Abrir menú">
+          <svg class="w-7 h-7 text-[#171412]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </header>
+      <!-- Mobile menu -->
+      <nav id="mobile-menu"
+        class="fixed top-0 left-0 w-full h-full bg-white z-50 flex-col items-center justify-center gap-8 hidden">
+        <button id="close-menu" class="absolute top-4 right-4 p-2" aria-label="Cerrar menú">
+          <svg class="w-7 h-7 text-[#171412]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="flex flex-col items-center gap-8 mt-20">
+          <a class="text-[#171412] text-lg font-medium" href="index.html">Inicio</a>
+          <button id="open-servicios" type="button"
+            class="text-[#171412] text-lg font-medium bg-transparent border-none cursor-pointer focus:outline-none">Servicios</button>
+          <a href="https://api.whatsapp.com/send/?phone=%2B51975450272&text=Hola%20buen%20día%2C%20deseo%20saber%20el%20presupuesto%20para%20una%20decoración%20de&type=phone_number&app_absent=0"
+            class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[#eccec0] text-[#171412] text-base font-bold leading-normal tracking-[0.015em]">
+            <span class="truncate">Solicitar presupuesto</span>
+          </a>
+        </div>
+      </nav>
+      <script>
+        // Menú hamburguesa funcional
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        menuBtn.onclick = () => mobileMenu.classList.remove('hidden');
+        closeMenu.onclick = () => mobileMenu.classList.add('hidden');
+      </script>
+      <div class="px-2 md:px-10 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="@container">
+            <div class="@[480px]:px-4 @[480px]:py-3">
+              <div
+                class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-xl min-h-60 md:min-h-80"
+                style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDPheon_yAZXNsfDnhof2jd0n9MPCeNS-jOX8s01prJUGswpOpAN23AjCk_vgLRrc44pMt46SXuDdB1AfngEheGG3W66I1yzoyZLy0xY1cprXalBuYileY91a0bkh8tcWcfqyS6xzTvGx3NMxXQ9TV6GZ5NYRYcQQkeWfiA6-SxF7fLMhKtgVITpc6d29_fUEsg-LcsOb9pkQ987wUx5224L2Sk_ToWpVaYJlu-oOr5zNT3XeBudpwBh3JlChKZ1BMVZmFXn7RIRKo&quot;);'>
+                <div class="flex justify-center gap-2 p-5">
+                  <div class="size-1.5 rounded-full bg-white"></div>
+                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
+                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
+                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
+                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Agrega id a las secciones para los anchors -->
+          <h2 id="inicio"
+            class="text-[#171412] tracking-light text-[22px] md:text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">
+Decoraciones Adonay: lo que necesitas para que tu matrimonio o evento tenga ese toque único, elegante y personalizado que tanto deseas.
+          </h2>
+          <p class="text-[#171412] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">
+            Somos especialistas en transformar espacios y dar vida a momentos inolvidables. Nos encargamos de cada detalle para que tu celebración sea mágica y especial.
+          </p>
+          <!-- ...código anterior... -->
+          <h2 id="servicios"
+            class="text-[#171412] text-[20px] md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+            Tipos de Eventos
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("Cumpleaños.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Cumpleaños</p>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("Matrimonios.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Matrimonios</p>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("BabyShower.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Baby Shower</p>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("Promocion.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Promociones</p>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("Bautizos.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Bautizos</p>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("Aniversario.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Aniversarios</p>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("FiestasPatrias.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Fiestas Patrias</p>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("Otros.jpg");'></div>
+              <p class="text-[#171412] text-base font-medium leading-normal text-center">Otros</p>
+            </div>
+          </div>
+          <!-- ...código anterior... -->
+          <!-- Contactanos y Escríbenos en: ahora centrados y responsivos -->
+          <div
+            class="flex flex-col items-center md:flex-row md:items-start md:justify-center gap-8 px-2 md:px-4 py-3 w-full">
+            <!-- Contact Us Form -->
+            <div class="flex-1 max-w-full md:max-w-[480px] w-full flex flex-col items-center">
+              <h3 class="text-[#171412] text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-0 text-center w-full">
+                Contactanos
+              </h3>
+              <form id="contact-form" class="w-full max-w-md" method="GET" action="">
+                <div class="flex flex-wrap items-end gap-4">
+                  <label class="flex flex-col min-w-40 flex-1">
+                    <input id="nombre" name="nombre" placeholder="Tu nombre"
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#171412] focus:outline-0 focus:ring-0 border-none bg-[#f4f2f1] focus:border-none h-14 placeholder:text-[#827168] p-4 text-base font-normal leading-normal"
+                      value="" required />
+                  </label>
+                </div>
+                <div class="flex flex-wrap items-end gap-4 py-3">
+                  <label class="flex flex-col min-w-40 flex-1">
+                    <input id="correo" name="correo" type="email" placeholder="Tu correo"
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#171412] focus:outline-0 focus:ring-0 border-none bg-[#f4f2f1] focus:border-none h-14 placeholder:text-[#827168] p-4 text-base font-normal leading-normal"
+                      value="" required />
+                  </label>
+                </div>
+                <div class="flex flex-wrap items-end gap-4 py-3">
+                  <label class="flex flex-col min-w-40 flex-1">
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#171412] focus:outline-0 focus:ring-0 border-none bg-[#f4f2f1] focus:border-none min-h-36 placeholder:text-[#827168] p-4 text-base font-normal leading-normal"
+                      required></textarea>
+                  </label>
+                </div>
+                <div class="flex py-3 justify-center">
+                  <button type="submit"
+                    class="flex min-w-[84px] max-w-full md:max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#eccec0] text-[#171412] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Enviar</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- Connect with us + Address -->
+            <div class="flex-1 max-w-full md:max-w-[320px] w-full flex flex-col items-center">
+              <h3 class="text-[#171412] text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-0 text-center w-full">
+                Escríbenos en
+              </h3>
+              <div class="@container w-full flex justify-center">
+                <!-- Iconos con href -->
+                <div class="gap-2 grid-cols-[repeat(auto-fit, minmax(80px,_1fr))] grid w-full">
+                  <a href="https://web.facebook.com/irinio.yoveralalupu" target="_blank" rel="noopener"
+                    class="flex flex-col items-center gap-2 bg-white py-2.5 text-center">
+                    <div class="rounded-full bg-[#f4f2f1] p-2.5">
+                      <div class="text-[#171412]" data-icon="FacebookLogo" data-size="20px" data-weight="regular">
+                        <!-- SVG Facebook -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                          viewBox="0 0 256 256">
+                          <path
+                            d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="text-[#171412] text-sm font-medium leading-normal">Facebook</p>
+                  </a>
+                  <a href="https://wa.me/51975450272" target="_blank" rel="noopener"
+                    class="flex flex-col items-center gap-2 bg-white py-2.5 text-center">
+                    <div class="rounded-full bg-[#f4f2f1] p-2.5">
+                      <div class="text-[#171412]" data-icon="WhatsappLogo" data-size="20px" data-weight="regular">
+                        <!-- SVG WhatsApp -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                          viewBox="0 0 256 256">
+                          <path
+                            d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="text-[#171412] text-sm font-medium leading-normal">WhatsApp</p>
+                  </a>
+                  <a href="https://www.tiktok.com/@estherpacherrezri" target="_blank" rel="noopener"
+                    class="flex flex-col items-center gap-2 bg-white py-2.5 text-center">
+                    <div class="rounded-full bg-[#f4f2f1] p-2.5">
+                      <div class="text-[#171412]" data-icon="TiktokLogo" data-size="20px" data-weight="regular">
+                        <!-- SVG TikTok -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                          viewBox="0 0 256 256">
+                          <path
+                            d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="text-[#171412] text-sm font-medium leading-normal">TikTok</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Servicios -->
+          <div id="modal-servicios"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-xs w-full relative flex flex-col items-center">
+              <button id="close-servicios"
+                class="absolute top-2 right-2 text-[#171412] text-2xl font-bold">&times;</button>
+              <h3 class="text-[#171412] text-lg font-bold mb-4 text-center">Servicios</h3>
+              <img src="https://promart.vteximg.com.br/arquivos/ids/6607098-1000-1000/9902957.jpg?v=638040492941300000"
+                alt="Alquiler de Mesas y Sillas" class="w-32 h-32 object-cover rounded-lg mb-4" />
+              <ul class="space-y-3">
+                <li class="text-[#171412] text-base font-medium text-center">Alquiler de Mesas y Sillas</li>
+              </ul>
+            </div>
+          </div>
+          <script>
+            // filepath: d:\Proyectos programacion\Decoraciones Adonay\index.html
+            // Soporta ambos botones con el mismo id
+            document.querySelectorAll('#open-servicios').forEach(btn => {
+              btn.onclick = function (e) {
+                e.preventDefault();
+                document.getElementById('modal-servicios').classList.remove('hidden');
+              };
+            });
+            document.getElementById('close-servicios').onclick = function () {
+              document.getElementById('modal-servicios').classList.add('hidden');
+            };
+            // Cierra el modal al hacer click fuera del contenido
+            document.getElementById('modal-servicios').onclick = function (e) {
+              if (e.target === this) this.classList.add('hidden');
+            };
+          </script>
+          <footer class="bg-[#e2bfae] mt-10 py-6">
+            <div class="max-w-[960px] mx-auto px-4 flex flex-col gap-2 text-center">
+              <p class="text-[#171412] text-base font-semibold">Av.23 de Febrero Mz.A Lt 11 C.P. San Antonio</p>
+              <p class="text-[#827168] text-sm font-normal">Dios los bendiga y acompañe siempre en todos los momentos de
+                su
+                vida.
+              </p>
+              <p class="text-[#171412] text-xs font-light mt-2">Creado por Edson Yovera. © Todos los derechos
+                reservados.
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
