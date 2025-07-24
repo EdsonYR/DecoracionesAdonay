@@ -150,48 +150,123 @@
             class="text-[#171412] text-[20px] md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
             Tipos de Eventos
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("Cumpleaños.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Cumpleaños</p>
-            </div>
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("Matrimonios.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Matrimonios</p>
-            </div>
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("BabyShower.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Baby Shower</p>
-            </div>
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("Promocion.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Promociones</p>
-            </div>
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("Bautizos.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Bautizos</p>
-            </div>
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("Aniversario.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Aniversarios</p>
-            </div>
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("FiestasPatrias.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Fiestas Patrias</p>
-            </div>
-            <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                style='background-image: url("Otros.jpg");'></div>
-              <p class="text-[#171412] text-base font-medium leading-normal text-center">Otros</p>
-            </div>
-          </div>
+          <!-- Tipos de Eventos con doble contorno: brillante y degradado -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
+  <!-- Cumpleaños -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <!-- Contorno brillante -->
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <!-- Segundo contorno degradado -->
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("Cumpleaños.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Cumpleaños</p>
+  </div>
+  <!-- Matrimonios -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("Matrimonios.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Matrimonios</p>
+  </div>
+  <!-- Baby Shower -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("BabyShower.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Baby Shower</p>
+  </div>
+  <!-- Promociones -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("Promocion.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Promociones</p>
+  </div>
+  <!-- Bautizos -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("Bautizos.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Bautizos</p>
+  </div>
+  <!-- Aniversarios -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("Aniversario.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Aniversarios</p>
+  </div>
+  <!-- Fiestas Patrias -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("FiestasPatrias.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Fiestas Patrias</p>
+  </div>
+  <!-- Otros -->
+  <div class="flex flex-col gap-3 pb-3">
+    <div class="w-full aspect-square bg-center bg-no-repeat rounded-xl relative overflow-visible p-1">
+      <span class="absolute inset-0 rounded-xl pointer-events-none z-10"
+        style="box-shadow: 0 0 0 4px #fffbe8, 0 0 16px 4px #e2bfae99;">
+      </span>
+      <span class="absolute -inset-2 rounded-[1.5rem] pointer-events-none z-0"
+        style="background: radial-gradient(circle, #e2bfae 0%, #fffbe8 60%, transparent 100%); opacity: 0.7;">
+      </span>
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg relative z-20"
+        style='background-image: url("Otros.jpg");'></div>
+    </div>
+    <p class="text-[#171412] text-base font-bold leading-normal text-center">Otros</p>
+  </div>
+</div>
           <!-- Contactanos y Escríbenos en: ahora centrados y responsivos -->
           <div
             class="flex flex-col items-center md:flex-row md:items-start md:justify-center gap-8 px-2 md:px-4 py-3 w-full">
