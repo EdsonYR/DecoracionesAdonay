@@ -10,7 +10,7 @@
   <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  
+
 </head>
 
 <body>
@@ -76,30 +76,76 @@
       </script>
       <div class="px-2 md:px-10 flex flex-1 justify-center py-5">
         <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-          <div class="@container">
-            <div class="@[480px]:px-4 @[480px]:py-3">
-              <div
-                class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-xl min-h-60 md:min-h-80"
-                style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDPheon_yAZXNsfDnhof2jd0n9MPCeNS-jOX8s01prJUGswpOpAN23AjCk_vgLRrc44pMt46SXuDdB1AfngEheGG3W66I1yzoyZLy0xY1cprXalBuYileY91a0bkh8tcWcfqyS6xzTvGx3NMxXQ9TV6GZ5NYRYcQQkeWfiA6-SxF7fLMhKtgVITpc6d29_fUEsg-LcsOb9pkQ987wUx5224L2Sk_ToWpVaYJlu-oOr5zNT3XeBudpwBh3JlChKZ1BMVZmFXn7RIRKo&quot;);'>
-                <div class="flex justify-center gap-2 p-5">
-                  <div class="size-1.5 rounded-full bg-white"></div>
-                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
-                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
-                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
-                  <div class="size-1.5 rounded-full bg-white opacity-50"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Agrega id a las secciones para los anchors -->
+<!-- Carrusel de imágenes para decoraciones y eventos -->
+<div class="@container">
+  <div class="@[480px]:px-4 @[480px]:py-3">
+    <div class="relative w-full bg-white @[480px]:rounded-xl min-h-80 md:min-h-[340px] flex items-end overflow-hidden" style="height: 320px;">
+      <!-- Botón anterior -->
+      <button id="prev-slide" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-[#eccec0] bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-md">
+        <svg class="w-6 h-6 text-[#171412]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <!-- Imagen del carrusel -->
+      <img id="carousel-image"
+        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
+        alt="Decoración de evento"
+        class="object-cover w-full h-full transition-all duration-500 rounded-xl"
+        style="height: 320px; min-height: 320px; max-height: 400px;" />
+      <!-- Botón siguiente -->
+      <button id="next-slide" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-[#eccec0] bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-md">
+        <svg class="w-6 h-6 text-[#171412]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      <!-- Indicadores -->
+      <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div class="carousel-dot size-2 rounded-full bg-white opacity-80 cursor-pointer"></div>
+        <div class="carousel-dot size-2 rounded-full bg-white opacity-50 cursor-pointer"></div>
+        <div class="carousel-dot size-2 rounded-full bg-white opacity-50 cursor-pointer"></div>
+        <div class="carousel-dot size-2 rounded-full bg-white opacity-50 cursor-pointer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Carrusel simple con imágenes de eventos, fiestas, cumpleaños y matrimonios
+  const images = [
+    // Matrimonio elegante
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX6VZZL7U_D1O0LhV6zNuZmrXdN7ILAs8Wk2ZaeRNvt4WzmKAozaxhwdDWEdOiWP8f6fivvqvfRbFN585N09YzkHFG4h-XV6x8NmRFkMP4c-_0nie8UjwUs-8KDK_vEeA2LiyI10Xvu2g/s980/EVENTOS.jpg",
+    // Fiesta de quinceañera
+    "https://static.wixstatic.com/media/5aede8_06bccbd0730c4f628b627551d492d529~mv2.jpg/v1/fill/w_640,h_430,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/5aede8_06bccbd0730c4f628b627551d492d529~mv2.jpg",
+    // Celebración con globos y luces
+    "https://cdn0.casamientos.com.ar/article-vendor/5026/3_2/960/jpg/46722197-1047121452139995-1866042575761178624-o_7_115026_v1.jpeg",
+    // Evento social elegante
+    "https://saketos.es/wp-content/uploads/2025/03/ninas-de-un-ano-3.jpg"
+  ];
+  let current = 0;
+  const img = document.getElementById('carousel-image');
+  const dots = document.querySelectorAll('.carousel-dot');
+  function showSlide(idx) {
+    current = (idx + images.length) % images.length;
+    img.src = images[current];
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('opacity-80', i === current);
+      dot.classList.toggle('opacity-50', i !== current);
+    });
+  }
+  document.getElementById('prev-slide').onclick = () => showSlide(current - 1);
+  document.getElementById('next-slide').onclick = () => showSlide(current + 1);
+  dots.forEach((dot, i) => dot.onclick = () => showSlide(i));
+  showSlide(0);
+</script>
           <h2 id="inicio"
             class="text-[#171412] tracking-light text-[22px] md:text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">
-Decoraciones Adonay: lo que necesitas para que tu matrimonio o evento tenga ese toque único, elegante y personalizado que tanto deseas.
+            Decoraciones Adonay: lo que necesitas para que tu matrimonio o evento tenga ese toque único, elegante y
+            personalizado que tanto deseas.
           </h2>
           <p class="text-[#171412] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">
-            Somos especialistas en transformar espacios y dar vida a momentos inolvidables. Nos encargamos de cada detalle para que tu celebración sea mágica y especial.
+            Somos especialistas en transformar espacios y dar vida a momentos inolvidables. Nos encargamos de cada
+            detalle para que tu celebración sea mágica y especial.
           </p>
-          <!-- ...código anterior... -->
+        
           <h2 id="servicios"
             class="text-[#171412] text-[20px] md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
             Tipos de Eventos
@@ -146,13 +192,13 @@ Decoraciones Adonay: lo que necesitas para que tu matrimonio o evento tenga ese 
               <p class="text-[#171412] text-base font-medium leading-normal text-center">Otros</p>
             </div>
           </div>
-          <!-- ...código anterior... -->
           <!-- Contactanos y Escríbenos en: ahora centrados y responsivos -->
           <div
             class="flex flex-col items-center md:flex-row md:items-start md:justify-center gap-8 px-2 md:px-4 py-3 w-full">
             <!-- Contact Us Form -->
             <div class="flex-1 max-w-full md:max-w-[480px] w-full flex flex-col items-center">
-              <h3 class="text-[#171412] text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-0 text-center w-full">
+              <h3
+                class="text-[#171412] text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-0 text-center w-full">
                 Contactanos
               </h3>
               <form id="contact-form" class="w-full max-w-md" method="GET" action="">
@@ -187,7 +233,8 @@ Decoraciones Adonay: lo que necesitas para que tu matrimonio o evento tenga ese 
             </div>
             <!-- Connect with us + Address -->
             <div class="flex-1 max-w-full md:max-w-[320px] w-full flex flex-col items-center">
-              <h3 class="text-[#171412] text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-0 text-center w-full">
+              <h3
+                class="text-[#171412] text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-0 text-center w-full">
                 Escríbenos en
               </h3>
               <div class="@container w-full flex justify-center">
